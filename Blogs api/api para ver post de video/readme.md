@@ -1,6 +1,7 @@
 # Clover.social Videos Viewer
 
 Una aplicación web simple que muestra videos recomendados desde la plataforma **Clover.social**, permitiendo explorar y visualizar contenido directamente desde la API oficial de Cloverspace.
+![image](https://github.com/user-attachments/assets/76a19785-ada8-4050-8313-9df92b98b08c)
 
 ## 🧩 ¿Para qué sirve?
 
