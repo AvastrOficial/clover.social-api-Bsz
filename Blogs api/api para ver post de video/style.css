@@ -1,0 +1,101 @@
+    body {
+      font-family: sans-serif;
+      background: #121212;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+   .card {
+  width: 350px;
+  border-radius: 30px;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  color: #fff;
+  margin: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.card video {
+  width: 100%;
+  aspect-ratio: 16 / 16;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.card p {
+  padding: 1rem;
+  margin: 0;
+  font-size: 15px;
+  color: #d1d1d6;
+}
+
+.author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.author span {
+  font-weight: 500;
+  color: #fff;
+}
+
+.author button {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border-radius: 10px;
+  padding: 6px 10px;
+  font-size: 13px;
+  margin-left: 6px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.author button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+    h3 {
+      margin: 10px 0;
+      color: #fff;
+    }
+    p {
+      color: #ccc;
+    }
+    #locale-select, #load-more {
+      margin: 10px 0;
+      padding: 6px 10px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    }
+    #load-more {
+      background-color: #0af;
+      color: white;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    #load-more:hover {
+      background-color: #09c;
+    }
