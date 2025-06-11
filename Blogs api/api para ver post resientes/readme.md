@@ -2,6 +2,8 @@
 
 Este proyecto es una simple aplicación web que carga y muestra posts del blog de CloverSpace utilizando su API pública, con paginación y soporte para contenido multimedia (imágenes y videos).
 
+![image](https://github.com/user-attachments/assets/b7a8cf44-fb46-4a55-a92a-997b18f992a7)
+
 ---
 
 ## Características
