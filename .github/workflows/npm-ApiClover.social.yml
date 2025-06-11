@@ -1,0 +1,52 @@
+name: Node.js Package
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: npm test
+
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org/
+
+      # ✅ Paso opcional: generar o actualizar README.md
+      - name: Generate README.md
+        run: |
+          echo "# CloverSpace API - Blogs" > README.md
+          echo "" >> README.md
+          echo "Este paquete ofrece una colección de APIs públicas de CloverSpace diseñadas para facilitar el acceso a contenido dinámico como blogs, videos, imágenes y música. Ideal para integraciones modernas con soporte CORS y paginación. Compatible con proyectos frontend y backend." >> README.md
+          echo "" >> README.md
+          echo "## APIs incluidas" >> README.md
+          echo "" >> README.md
+          echo "### Posts recientes" >> README.md
+          echo "GET https://api.cloverspace.io/f/v1/blogs?type=latest&size=10" >> README.md
+          echo "" >> README.md
+          echo "### Videos recomendados" >> README.md
+          echo "GET https://api.cloverspace.io/f/v1/blogs?type=recommend&rcmdBlogLabel=video&size=5" >> README.md
+          echo "" >> README.md
+          echo "### Imágenes recomendadas" >> README.md
+          echo "GET https://api.cloverspace.io/f/v1/blogs?type=recommend&rcmdBlogLabel=image&size=10" >> README.md
+          echo "" >> README.md
+          echo "### Música recomendada" >> README.md
+          echo "GET https://api.cloverspace.io/f/v1/blogs?type=recommend&rcmdBlogLabel=music&size=10" >> README.md
+
+      - run: npm ci
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
