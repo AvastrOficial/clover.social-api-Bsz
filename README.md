@@ -1,5 +1,7 @@
 # clover.social-api-Bsz
 
+![Visitas](https://visitor-badge.laobi.icu/badge?page_id=CloverSocialApi&left_text=Visitas&left_color=%23000000&right_color=%238f8f8f)
+
 Este repositorio contiene la implementación principal (main) para manejar archivos y consumir las APIs relacionadas con el sistema de Blogs de **Clover Social** , un proyecto orientado a la gestión y visualización de contenido dinámico a través de APIs REST.
 
 ---
