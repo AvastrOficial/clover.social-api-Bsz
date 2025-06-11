@@ -58,6 +58,7 @@ Las APIs son el núcleo que permiten la comunicación con el backend. A continua
 
 - **URL:**  
   `https://api.cloverspace.io/f/v1/blogs?type=recommend&rcmdBlogLabel=video&size=5`
+
 - **Descripción:**  
   Obtiene hasta 5 posts recomendados que contienen videos, ideal para mostrar contenido audiovisual destacado.
 
@@ -65,13 +66,7 @@ Las APIs son el núcleo que permiten la comunicación con el backend. A continua
 
 - **URL base:**  
   `https://api.cloverspace.io/f/v1/blogs`
-- **Parámetros:**  
-  - `type=recommend` (para publicaciones recomendadas)  
-  - `rcmdBlogLabel=image` (filtra solo posts con imágenes)  
-  - `size=10` (número de posts a obtener)  
-  - `pageToken` (opcional, para paginación)  
-- **Ejemplo completo:**  
-  `https://api.cloverspace.io/f/v1/blogs?type=recommend&rcmdBlogLabel=image&size=10`
+
 - **Descripción:**  
   Recupera posts recomendados que incluyen imágenes, útil para galerías o vistas tipo feed visual.
 
@@ -79,6 +74,7 @@ Las APIs son el núcleo que permiten la comunicación con el backend. A continua
 
 - **URL:**  
   `https://api.cloverspace.io/f/v1/blogs?type=recommend&rcmdBlogLabel=music&size=10`
+
 - **Descripción:**  
   Obtiene hasta 10 posts recomendados relacionados con música, para mostrar contenido musical relevante.
 
