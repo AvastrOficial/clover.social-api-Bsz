@@ -92,3 +92,10 @@ Visualizar la información que proporcionan estas APIs es crucial para:
 - **Experiencia de usuario:** Brinda una experiencia fluida y dinámica en las plataformas que consumen estas APIs, haciendo posible aplicaciones web y móviles modernas.
 
 ---
+## Regiones y configuración del idioma
+
+Para mejorar la relevancia y localización del contenido, se usa el header HTTP `Accept-Language` con soporte para múltiples países de habla hispana:
+
+```http
+Accept-Language: es-MX,es-AR,es-CO,es-CL,es-PE,es-VE,es-EC,es-CR,es-UY,es-PA,es-DO
+```
